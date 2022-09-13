@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  position: relative;
+  /* background: #1d1d1d; */
+  /* color: #fff; */
+  background: #ECEFF1;
+  font-family: 'roboto', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #6200ee;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+}
+
+#ibtn {
+  background-color: yellowgreen;
+  font-weight: 500;
+  padding: 7px 20px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+
+.task-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  height: auto;
+  margin-top: 60px;
+  padding: 0 10vw;
+  display: grid;
+  grid-template-columns: minmax(150px, 40%) 1fr;
+  grid-template-rows: 100vh;
+  grid-column-gap: 20px;
+
+}
+
+.section {
+  padding-top: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-end;
+}
+
+
+.input {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  min-height: 30px;
+  min-width: 200px;
+  border-radius: 10px;
+  padding-right: 10px;
+  padding-left: 15px;
+}
+
+.header {
+  width: 30vw;
+  align-self: center;
+  min-height: 40vh;
+  margin-top: 100px;
+  font-size: 1.8rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+#myInput {
+  width: 30vw;
+  height: 3rem;
+  border: none;
+}
+
+#add {
+  min-width: 60px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  background: #ff3559;
+  color: #fff;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+ max-height: 80vh;
+ overflow-y: scroll;
+}
+
+/* Style the list items */
+ul li {
+  display: block;
+  height: auto;
+  overflow-wrap: break-word;
+  list-style-type: none;
+  min-width: 250px;
+  width: 40vw;
+  margin-bottom: 1.2rem;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  position: relative;
+  background: #eee;
+  font-size: 1.2rem;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  /* background: #f9f9f9; */
+  background: wheat;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: blue;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 35%;
+  left: 16px;
+  padding: auto 0;
+  margin: auto 0;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+
+.close {
+  position: absolute;
+  right: 5px;
+  top: 30%;
+  padding: 0px 7px;
+  border-radius: 50%;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+
+/* tablet view */
+
+@media (max-width: 996px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+
+
+/* mobile view */
+@media (max-width: 800px) {
+
+  .task-container {
+    padding: 0;
+    display: block;
+
+  }
+
+  .task-container {
+    margin-top: 0%;
+    display: block;
+  }
+
+  .header {
+    width: 100%;
+    min-height: 30vh;
+  
+  }
+
+  .section {
+    align-items: center;
+  }
+
+
+  .header{
+    max-height: 30vh;
+    display: grid;
+    grid-template-columns: 70vw 10vw;
+    grid-template-rows: 15vh 10vh  ;
+justify-content: center;
+    margin-top: 70px;
+
+  }
+
+  .header>h2{
+    grid-column: 1/span2;
+    margin-bottom: 0%;
+  }
+
+  #myInput {
+    width: 68vw;
+    height:3rem;
+  }
+#add{
+  padding: 10px 10px;
+}
+
+  ul {
+    max-height: 50vh;
+    overflow-y: scroll;
+   }
+
+ul li{
+  width: 80vw;
+}
+}
+
+
+
+@media (max-width: 575px) {
+  html {
+    font-size: 12px;
+  }
+.header{
+  height: 25vh;
+  margin-top: 70px;
+}
+  /* #searchtxt{
+    display: none;
+  } */
+
+  ul {
+   max-height: 40vh;
+   overflow-y: scroll;
+  }
+
+  .btn{
+    display: none;
+  }
+
+  #myInput {
+    min-width: 75%;
+  }
+
+}
+
+/* background: #1d1d1d; */

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mytodo</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar  -->
+    <nav class="navbar">
+        <h1 class="brand">myTodo</h1>
+        <div class="toggle-btn">
+            <span></span>
+            <span></span>
+        </div>
+
+        <form class="search" role="search">
+            <input class="input" id="searchtxt" type="search" placeholder="Enter Keyword..." aria-label="Search">
+            <button id="ibtn" class="btn " type="submit" >Search</button>
+        </form>
+    </nav>
+
+
+      <div class="task-container">
+
+        <div class="section" >
+            <div id="myDIV" class="header">
+                <h2>Add Task</h2>
+                <input type="text" id="myInput" class="input" placeholder="Title...">
+                <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+                <button id="add" type="button" >Add</button>
+              </div>
+        </div>
+
+        <div class="section" >
+            <ul id="myUL">
+                <li >Task-1</li>
+                <li class="checked myLi">Task-2</li>
+                <li >Task-3</li>
+                <li >Task-4</li>
+                <li >Task-5</li>
+              </ul>
+              
+        </div>
+      </div>*
+      
+
+      <script src="script.js"></script>
+</body>
+</html>
