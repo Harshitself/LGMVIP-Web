@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    }
+
+.formstyle
+{
+width: 600px;
+height: 350px;
+margin: 20px auto;
+border-radius: 48px;
+background: #e0e0e0;
+-webkit-box-shadow: -2px -1px 25px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 25px 11px rgba(0,0,0,0.75);
+box-shadow: -2px -1px 25px 11px rgba(0,0,0,0.75);
+padding: 20px;
+text-align: center;
+background-color: whitesmoke;
+}
+
+/* Display top horizontal bar that contain some information. */
+h1 {
+	text-align: center;
+    font-family:'Times New Roman', Times, serif;
+	padding: 23px;
+	background-color:wheat;
+    box-shadow: 0px 1px 7px 4px rgba(95, 108, 108, 0.88);
+	color:rgba(255, 0, 0, 0.493);
+    margin-bottom: 50px;
+	}
+input:hover
+{
+background-color: #00acc1;
+}
+	
+table{
+    width: 80%;
+    text-align: center;
+}
+
+/* It is used to create the layout for calculator button. */
+.btn{
+width: 96px;
+height: 50px;
+border-radius: 77% 23% 41% 59% / 44% 37% 63% 56%  ;
+font-size: 25px;
+margin: 2px;
+cursor: pointer;
+background-color: #ec407a;
+color: white;
+
+}
+
+/* It is used to display the numbers, operations and results. */
+.textview{
+width:80%;
+margin: 5px;
+font-size: 25px;
+padding: 5px;
+border-radius: 10px;
+background-color: white;
+}	
+	.textview:hover{
+        background-color: aquamarine;
+    }
